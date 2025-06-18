@@ -24,7 +24,7 @@ const App = () => {
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('');
   const [trendingMovies, setTrendingMovies] = useState([]);
 
-  useDebounce(()=> setDebouncedSearchTerm(searchTerm),1000, [searchTerm]);
+  useDebounce(()=> setDebouncedSearchTerm(searchTerm),700, [searchTerm]);
 
   const fetchMovies = async (query='') => {
     setIsLoading(true);
